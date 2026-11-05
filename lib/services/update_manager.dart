@@ -45,8 +45,9 @@ const String downloadUrlArm64Key = 'arm64url';
 const String downloadFilename = 'Skyfy.apk';
 
 Future<void> checkAppUpdates() async {
-  // SKYFY is independently versioned; never install upstream Musify builds as SKYFY updates.
-  return;
+  // SKYFY updates are managed separately.
+  // Do not fetch or install upstream Musify releases.
+}
   // Update distribution targets Android APK builds only.
   if (!isMobilePlatform) return;
   try {
